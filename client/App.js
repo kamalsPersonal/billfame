@@ -9,6 +9,7 @@ import {
     CardItem,
     Button,
     Icon,
+    Fab,
     Left,
     Body,
     Right,
@@ -39,27 +40,35 @@ export default class AnatomyExample extends Component {
 
         if (!this.state.loading) {
             return (
-                <Card transparent>
-                    <CardItem cardBody>
-                        <Image source={require('./images/bill_gates.jpg')}/>
-                    </CardItem>
-                    <CardItem style={{backgroundColor: '#463d3d'}}>
-                        <H1 style={{color: 'white'}}>Bill Gates<Text style={{color: 'white'}}> (United
-                            States of
-                            America)</Text></H1>
+                <Container>
+                    <Card transparent>
+                        <CardItem cardBody>
+                            <Image source={require('./images/bill_gates.jpg')}/>
+                        </CardItem>
+                        <CardItem style={{backgroundColor: '#463d3d'}}>
+                            <H1 style={{color: 'white'}}>Bill Gates<Text style={{color: 'white'}}> (United
+                                States of
+                                America)</Text></H1>
 
-                    </CardItem>
-                    <CardItem style={{backgroundColor: '#776a67'}}>
-                        <H3 style={{color: 'white'}}>Global Rank: 6th {"\n"}National Rank: 6th</H3>
-                    </CardItem>
-                    <CardItem style={{backgroundColor: '#776a67'}}>
-                        <H3 style={{color: 'white'}}>Total worth: 456,004,249 USD</H3>
-                    </CardItem>
-                    <CardItem style={{backgroundColor: '#776a67b3', flexGrow: 1}}>
-                        <Text style={{color: 'white'}}>"If you're born poor, it's not your mistake. But if you die
-                            poor, it's your mistake!"</Text>
-                    </CardItem>
-                </Card>
+                        </CardItem>
+                        <CardItem style={{backgroundColor: '#776a67'}}>
+                            <H3 style={{color: 'white'}}>Global Rank: 6th {"\n"}National Rank: 6th</H3>
+                        </CardItem>
+                        <CardItem style={{backgroundColor: '#776a67'}}>
+                            <H3 style={{color: 'white'}}>Total worth: 456,004,249 USD</H3>
+                        </CardItem>
+                        <CardItem style={{backgroundColor: '#776a67b3', flexGrow: 1}}>
+                            <Text style={{color: 'white'}}>"If you're born poor, it's not your mistake. But if you die
+                                poor, it's your mistake!"</Text>
+                        </CardItem>
+                    </Card>
+                    <Fab active={this.state.active}
+                         style={{backgroundColor: '#E65100'}}
+                         position="bottomRight"
+                         onPress={() => this.setState({active: !this.state.active})}>
+                        <Icon name="add"/>
+                    </Fab>
+                </Container>
             );
         }
         else
