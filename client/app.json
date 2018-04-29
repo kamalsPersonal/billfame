@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "26.0.0"
+   "name": "Billionaires' Hall of Fame",
+   "icon": "./icon.png",
+   "version": "26.0.0",
+   "slug": "kamal0808",
+   "sdkVersion": "26.0.0",
+   "ios": {
+     "bundleIdentifier": "com.themakersweb.billionaireshalloffame"
+   },
+   "android": {
+     "package": "com.themakersweb.billionaireshalloffame"
+   }
   }
 }
