@@ -59,32 +59,21 @@ export default class AnatomyExample extends Component {
                                     <View cardBody style={{flex: 5}}>
                                         <Image source={item.image} style={{height: height, width: width}}/>
                                     </View>
-                                    <View style={{backgroundColor: '#463d3d', padding: 20, flex: 1, opacity: 0.7, alignItems: 'center'}}>
-                                        <H1 style={{color: 'white'}}>{item.name} <Text style={{color: 'white'}}>
-                                            ({item.country})</Text></H1>
-                                    </View>
-                                    <View style={{backgroundColor: '#463d3d', padding: 20, flex: 1, opacity: 0.7, alignItems: 'center'}}>
-                                        <H3 style={{color: 'white'}}>Global Rank: {item.globalRank}th {"\n"}National
-                                            Rank: {item.nationalRank}th</H3>
-                                    </View>
-                                    <View style={{backgroundColor: '#463d3d', padding: 20, flex: 1, opacity: 0.7, alignItems: 'center'}}>
-                                        <H3 style={{color: 'white'}}>Total worth: {item.totalWorth} USD</H3>
-                                    </View>
-                                    <View style={{backgroundColor: '#776a67b3', padding: 20, flex: 1, opacity: 0.7, alignItems: 'center'}}>
-                                        <Text style={{color: 'white'}}>"{item.quote}"</Text>
+                                    <View style={{
+                                        backgroundColor: '#776a67b3',
+                                        padding: 20,
+                                        flex: 3,
+                                        opacity: 0.7,
+                                        alignItems: 'center'
+                                    }}>
+                                        <Text style={{color: 'white'}}>{item.quote}</Text>
+                                        <Text style={{color: 'white'}}>- {item.author}</Text>
+                                        <Text style={{color: 'white'}}>(Swipe up)</Text>
                                     </View>
                                 </View>
                             )
                         }}>
                     </Swiper>
-
-
-                   {/* <Fab active={this.state.active}
-                         style={{backgroundColor: '#E65100'}}
-                         position="bottomRight"
-                         onPress={() => this.setState({active: !this.state.active})}>
-                        <Icon name="add"/>
-                    </Fab>*/}
                 </Container>
             );
         }
@@ -93,50 +82,75 @@ export default class AnatomyExample extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    linearGradient: {
-        flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderRadius: 5
-    }
-});
-
 const cards = [
     {
-        name: 'Bill Gates',
-        country: 'United States of America',
-        nationalRank: 4,
-        globalRank: 20,
-        totalWorth: '91 Billions',
-        quote: 'If you\'re born poor, it\'s not your mistake. But if you die poor, it\'s your mistake!',
-        image: require('./images/bill_gates.jpg')
+        quote: 'Thank you for your charity. May you earn more and give more!',
+        author: '90% of money earned by this app will be put to charity. Please help us reach at least 100 downloads',
+        image: require('./images/charity.jpeg')
     },
     {
-        name: 'Jeff Bezos',
-        country: 'United States of America',
-        nationalRank: 7,
-        globalRank: 14,
-        totalWorth: '119.4 Billions',
-        quote: 'If you can\'t tolerate critics, don\'t do anything new or interesting',
-        image: require('./images/bezos.jpg')
+        quote: 'Charity begins at home, and justice begins next door.',
+        author: 'Charles Dickens',
+        image: require('./images/charles-dickens.jpeg')
     },
     {
-        name: 'Jack Ma',
-        country: 'China',
-        nationalRank: 2,
-        globalRank: 9,
-        totalWorth: '39.1 Billions',
-        quote: 'Today is hard, tomorrow will be worse, but the day after tomorrow will be sunshine',
-        image: require('./images/jack-ma.jpeg')
+        quote: 'True charity is the desire to be useful to others with no thought of recompense.',
+        author: 'Emanuel Swedenborg',
+        image: require('./images/Emanuel-Swedenborg.jpeg')
     },
     {
-        name: 'You can be here too',
-        country: 'Represent your country',
-        nationalRank: 10,
-        globalRank: 10,
-        totalWorth: '200 Billions',
-        quote: 'You can contact all these billionaires and millionaires through this app. Wait for it!',
-        image: require('./images/you.jpg')
+        quote: 'It is justice, not charity, that is wanting in the world.',
+        author: 'Mary Wollstonecraft',
+        image: require('./images/MaryWollstonecraft.jpg')
+    },
+    {
+        quote: 'No one has ever become poor by giving.',
+        author: 'Anne Frank',
+        image: require('./images/anne-frank.jpeg')
+    },
+    {
+        quote: 'It\'s not how much we give but how much love we put into giving',
+        author: 'Mother Teresa',
+        image: require('./images/Mother-Teresa.jpeg')
+    },
+    {
+        quote: 'There is no exercise better for the heart than reaching down and lifting people up.',
+        author: 'John Holmes',
+        image: require('./images/John-Holmes.jpeg')
+    },
+    {
+        quote: 'In the end, though, maybe we must all give up trying to pay back the people in this world who sustain our lives. In the end, maybe it\'s wiser to surrender before the miraculous scope of human generosity and to just keep saying thank you, forever and sincerely, for as long as we have voices.',
+        author: 'Elizabeth Gilbert',
+        image: require('./images/Elizabeth-Gilbert.jpeg')
+    },
+    {
+        quote: 'When we give cheerfully and accept gratefully, everyone is blessed.',
+        author: 'Maya Angelou',
+        image: require('./images/Maya-Angelou.jpeg')
+    },
+    {
+        quote: 'A bone to the dog is not charity. Charity is the bone shared with the dog, when you are just as hungry as the dog.',
+        author: 'Jack London',
+        image: require('./images/Jack-London.jpg')
+    },
+    {
+        quote: 'You have not lived today until you have done something for someone who can never repay you.',
+        author: 'John Bunyan',
+        image: require('./images/John-Bunyan.jpg')
+    },
+    {
+        quote: 'While we do our good works let us not forget that the real solution lies in a world in which charity will have become unnecessary.',
+        author: 'Chinua Achebe',
+        image: require('./images/Chinua-Achebe.jpeg')
+    },
+    {
+        quote: 'Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness.',
+        author: 'Martin Luther King Jr.',
+        image: require('./images/Martin-Luther.jpeg')
+    },
+    {
+        quote: 'The simplest acts of kindness are by far more powerful then a thousand heads bowing in prayer.',
+        author: 'Mahatma Gandhi',
+        image: require('./images/Mahatma-Gandhi.jpeg')
     }
 ];
