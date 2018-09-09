@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "26.0.0"
+   "name": "Millionaire's Charity",
+   "icon": "./icon.png",
+   "version": "26.0.0",
+   "slug": "kamal0808",
+   "sdkVersion": "26.0.0",
+   "ios": {
+     "bundleIdentifier": "com.themakersweb.millchar"
+   },
+   "android": {
+     "package": "com.themakersweb.millchar"
+   }
   }
 }
